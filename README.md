@@ -1,58 +1,44 @@
 # 🚀 Cerebra – Beyond Transformers
 
-Cerebra is an experimental neural architecture designed to challenge the dominance of Transformers, RNNs, and CNNs in sequence and tabular modeling tasks.  
-Unlike current deep learning paradigms, Cerebra focuses on **efficiency**, **accuracy on small datasets**, and **scalable adaptability**, while avoiding the architectural overhead of attention-heavy models.
+**Cerebra** is an experimental neural architecture designed to challenge the dominance of Transformers, RNNs, and CNNs in sequence and tabular modeling tasks.  
+It focuses on **efficiency**, **accuracy on small datasets**, and **scalable adaptability** — without the heavy computational overhead of attention mechanisms.
 
 ---
 
 ## 📌 Why Cerebra?
 
-Current architectures have well-known limitations:
+Traditional architectures have limitations:
 
-- **Transformers** – Extremely powerful but computationally expensive, requiring large datasets to reach peak performance.  
-- **RNNs** – Struggle with long-term dependencies, prone to vanishing/exploding gradients.  
+- **Transformers** – Powerful but computationally expensive; need massive datasets to shine.  
+- **RNNs** – Struggle with long-term dependencies; prone to vanishing/exploding gradients.  
 - **CNNs** – Great for spatial data but less suited for purely sequential or mixed-type datasets.  
 
-Cerebra is built to address these:
-- Lightweight but highly expressive representation.
-- Works well on **small-to-medium datasets** where Transformers struggle.
-- Reduced training times and memory consumption.
-- Mathematically stable gradient propagation.
+**Cerebra’s advantages:**
+- Lightweight but expressive architecture.
+- Excels on **small-to-medium datasets** where Transformers often overfit.
+- Faster training and reduced memory usage.
+- Stable gradient propagation by design.
 
 ---
 
 ## 📂 Project Phases
 
-The project was completed in 5 main phases.
+**Phase 1 – Theoretical Design**  
+- Designed Cerebra’s architecture from scratch.  
+- Outlined theoretical improvements over Transformers, RNNs, and CNNs.  
+- Validated using preliminary mathematical modeling.
 
-### **Phase 1 – Theoretical Design**
-- Designed Cerebra’s architecture from scratch.
-- Outlined theoretical improvements over Transformers, RNNs, and CNNs.
-- Predicted behavior using mathematical reasoning and preliminary formula modeling.
+**Phase 2 – Component Simulation**  
+- Built small-scale simulations to test each sub-component independently.  
+- Verified theoretical predictions with synthetic data.
 
-### **Phase 2 – Simulation Design**
-- Built small-scale Python simulations with random data.
-- Tested each sub-component of Cerebra independently.
-- Verified that real behavior matched theoretical predictions.
+**Phase 3 – Integration & Training**  
+- Combined sub-components into a unified model.  
+- Trained on `employee_dataset_15k_full.csv` (salary prediction).  
+- Achieved **90%+ accuracy equivalent** on test splits.
 
-### **Phase 3 – Integration & Training**
-- Combined all Cerebra sub-components into a **unified model**.
-- Trained on a real dataset: `employee_dataset_15k_full.csv`.
-- Added CLI-based salary prediction:
-  - Inputs: **Country**, **Age**, **Experience**.
-  - Outputs: **Predicted Salary** + **Confidence Score**.
-  - Justification of why Cerebra beats Transformers, RNNs, CNNs (dynamic explanations).
-- Achieved **90%+ accuracy equivalent on test splits**.
-
-### **Phase 4 – Performance Evaluation**
-- Benchmarked Cerebra vs. Transformer, RNN, and CNN baselines.
-- Metrics recorded:
-  - RMSE
-  - R² Score
-  - Training time (total & per epoch)
-  - Inference latency
-  - Memory usage
-- Example result table:
+**Phase 4 – Performance Evaluation**  
+Benchmarked against Transformer, RNN, and CNN baselines.
 
 | Model       | RMSE        | R²      | Train Time (s) | Epoch Time (s) | Inf Time (s) | Mem (MB) |
 |-------------|------------|---------|----------------|----------------|--------------|----------|
@@ -61,90 +47,58 @@ The project was completed in 5 main phases.
 | RNN         | 99613.70   | -7.4583 | 5.09           | 0.30           | 0.0017       | 41.09    |
 | CNN         | 74791.84   | -3.7682 | 4.37           | 0.21           | 0.0011       | 27.86    |
 
-- **Key Takeaways**:
-  - Cerebra outperforms Transformer & RNN by ~78% in RMSE.
-  - Outperforms CNN by ~70% in RMSE.
-  - Trades slightly higher memory use for significant accuracy gains.
+**Key Takeaways:**
+- Cerebra outperforms Transformer & RNN by ~78% in RMSE.
+- Outperforms CNN by ~70% in RMSE.
+- Trades slightly higher memory use for huge accuracy gains.
 
-### **Phase 5 – Public Paper + Demo**
-- Prepared technical paper (includes theory, methodology, benchmarks).
-- Created an interactive Google Colab demo for testing.
-- Published on GitHub as portfolio material for academic & industry review.
+**Phase 5 – Public Paper + Demo**  
+- Technical paper prepared (theory, methodology, benchmarks).  
+- Interactive **Google Colab demo** for testing.  
 
 ---
 
 ## 🔬 Technical Highlights
 
-### Architecture Principles
-1. **Hybrid signal-flow structure** – avoids heavy attention while maintaining long-term dependencies.
-2. **Gradient stability** – custom scaling functions to prevent exploding/vanishing effects.
-3. **Data-efficient learning** – works on small datasets without massive overfitting.
+**Architecture Principles:**
+1. **Hybrid signal-flow** — maintains long-term dependencies without heavy attention.
+2. **Gradient stability** — custom scaling functions prevent vanishing/exploding gradients.
+3. **Data-efficient learning** — strong results on small datasets.
 
-### Training Setup
-- **Framework**: PyTorch
-- **Optimizer**: Adam
-- **Loss**: MSELoss for regression task
-- **Hardware**: Google Colab GPU (T4)
-- **Batch Size**: 32
-- **Epochs**: 20 (configurable)
+**Training Setup:**
+- **Framework:** PyTorch  
+- **Optimizer:** Adam  
+- **Loss:** MSELoss (regression)  
+- **Hardware:** Google Colab GPU (T4)  
+- **Batch Size:** 32  
+- **Epochs:** 20 (configurable)  
 
-### CLI Salary Prediction
-Run:
+---
 
-python cerebra_cli.py
-Enter:
+## 🛠 How to Run (Colab Preferred)
 
-Country: USA
-Age: 30
-Experience: 5
-Output:
+The easiest way to try Cerebra is through **Google Colab**:
 
-Predicted Salary: $82,340
-Confidence: ██████████ 92%
-Reason: Cerebra is optimized for small, noisy datasets. Transformers would overfit here, RNNs lose dependency tracking, CNNs underrepresent categorical sequences.
-📊 Visual Performance
+**Colab Demo:** [Open in Google Colab](https://colab.research.google.com/drive/1OWDa3uBjfIVO62cj3xjqHzIkqCqIQjdl?usp=sharing)  
+Steps:
+1. Open the Colab link above.  
+2. Upload `employee_dataset_15k_full.csv` to the Colab session.  
+3. Run all cells to train, evaluate, and test Cerebra.
 
-Interpretation:
+**What You’ll Get:**
+- Model training logs
+- Performance metrics (RMSE, R², etc.)
+- Salary predictions with confidence scores
 
-Cerebra achieves significantly lower RMSE while maintaining reasonable training time.
+---
 
-Works especially well when dataset size is <50k samples.
+## 📌 Future Work
+- Extend to text classification & time-series forecasting.  
+- Multi-modal Cerebra for mixed data types.  
+- Memory optimization for edge deployment.
 
-Avoids Transformer’s heavy compute while outperforming RNNs and CNNs.
+---
 
-📜 Documentation
-Old Documentation – covers initial theoretical design. (the one in small text)
-
-New Documentation: – adds  just a bit more tweaks and a note. (the one in large text titel)
-```
-🛠 Running the Project
-Clone the repository:
-
-git clone https://github.com/Shaheer-op9872uw/Beyond-Transformers
-cd cerebra
-Install dependencies:
-
-pip install -r requirements.txt
-Train and test:
-
-python train_cerebra.py
-Run CLI salary prediction:
-
-python cerebra_cli.py
-
-And if on google colab (preffered)
-
--Copy or download the google colab notebook
--download the CSV dataset
--run the code!
-
-```
-📌 Future Work
-Extend Cerebra for text classification & time-series forecasting.
-
-Implement multi-modal Cerebra for mixed data types.
-
-Optimize memory use for deployment on edge devices.
-
-✨ Credits
-Created by Muhammad Shaheer, Along with contribution of Abdul Wahab
+## ✨ Credits
+Created by **Muhammad Shaheer**  
+With contributions from **Abdul Wahab**
