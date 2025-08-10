@@ -131,6 +131,13 @@ python train_cerebra.py
 Run CLI salary prediction:
 
 python cerebra_cli.py
+
+And if on google colab (preffered)
+
+-Copy or download the google colab notebook
+-download the CSV dataset
+-run the code!
+
 ```
 📌 Future Work
 Extend Cerebra for text classification & time-series forecasting.
