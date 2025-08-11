@@ -85,6 +85,7 @@ Steps:
 1. Open the Colab link above.  
 2. Upload `employee_dataset_15k_full.csv` to the Colab session.  
 3. Run all cells to train, evaluate, and test Cerebra.
+4. See the magic!
 
 **What You’ll Get:**
 - Model training logs
