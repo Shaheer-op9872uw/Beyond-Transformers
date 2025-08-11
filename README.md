@@ -18,6 +18,7 @@ Traditional architectures have limitations:
 - Excels on **small-to-medium datasets** where Transformers often overfit.
 - Faster training and reduced memory usage.
 - Stable gradient propagation by design.
+- Easy to use.
 
 ---
 
