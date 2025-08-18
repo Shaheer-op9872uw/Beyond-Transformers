@@ -1,4 +1,4 @@
-# 🚀 Cerebra – Beyond Transformers
+# 🚀 Cerebra – Beyond Transformers, and beyond tradition! 
 
 **Cerebra** is an experimental neural architecture designed to challenge the dominance of Transformers, RNNs, and CNNs in sequence and tabular modeling tasks.  
 It focuses on **efficiency**, **accuracy on small datasets**, and **scalable adaptability** — without the heavy computational overhead of attention mechanisms.
